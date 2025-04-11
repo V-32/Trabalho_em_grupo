@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Login</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="login-container">
+        <h2>Login</h2>
+        <form id="loginForm">
+            <div class="input-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Digite seu email" required>
+            </div>
+            <div class="input-group senha-container">
+                <label for="senha">Senha</label>
+                <input type="password" id="senha" name="senha" placeholder="Digite sua senha" required>
+                <span id="toggleSenha" class="toggle-senha">👁️</span>
+            </div>
+            <button type="submit" class="btn-login">Entrar</button>
+        </form>
+    </div>
+ 
+    <script>
+        const form = document.getElementById("loginForm");
+        const senhaInput = document.getElementById("senha");
+        const toggleSenha = document.getElementById("toggleSenha");
+ 
+        form.addEventListener("submit", function(event) {
+            event.preventDefault();
+ 
+            const email = document.getElementById("email").value.trim();
+            const senha = senhaInput.value.trim();
+ 
+            if (email !== "" && senha !== "") {
+                window.location.href = "menu.html";
+            } else {
+                alert("Por favor, preencha todos os campos.");
+            }
+        });
+ 
+        toggleSenha.addEventListener("click", function () {
+            const tipo = senhaInput.getAttribute("type");
+            senhaInput.setAttribute("type", tipo === "password" ? "text" : "password");
+            toggleSenha.textContent = tipo === "password" ? "❌" : "👁️";
+        });
+    </script>
+</body>
+</html>

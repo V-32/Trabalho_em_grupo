@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Você não sabia!</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="logo_você_não_sabia.png" width="200" height="70">
+    </div>
+    <div class="menu">
+      <button id="info-btn" class="info-icon">❔</button>
+      <button class="btn login"><a class="botao" href="login.html">Entrar</a></button>
+      <button class="btn create"><a class="botao" href="conta.html">Criar uma conta</a></button>
+      <div id="info-box" class="info-box">VOCÊ NÃO SABIA! é um site feito para gamers curiosos! Aqui você encontra easter eggs escondidos,
+        curiosidades incríveis, tier lists atualizadas e muitos outros conteúdos sobre o universo dos jogos.
+        De clássicos nostálgicos a lançamentos atuais, mergulhamos fundo nos detalhes que passam batido por muita gente.
+        Se é sobre games e te faz pensar "caraca, eu não sabia disso!", é aqui que você vai encontrar.</div>
+    </div>
+  </header>
+ 
+  <main>
+    <h1>Bem vindo ao nosso <span class="highlight">site!</span> </h1>
+    <p class="subtitle">Feito com o propósito de mostrar curiosidades nos jogos.</p>
+ 
+  </main>
+   
+<script>
+  const infoBtn = document.getElementById("info-btn");
+  const infoBox = document.getElementById("info-box");
+ 
+  infoBtn.addEventListener("click", () => {
+    infoBox.style.display = infoBox.style.display === "block" ? "none" : "block";
+  });
+ 
+  window.addEventListener("click", function (e) {
+    if (!infoBtn.contains(e.target) && !infoBox.contains(e.target)) {
+      infoBox.style.display = "none";
+    }
+  });
+</script>
+<section class="galeria">
+  <div class="galeria-item">
+    <a href="login.html">
+      <img src="Curiosidades.png" alt="Imagem 1">
+    </a>
+  </div>
+  <div class="galeria-item">
+    <a href="login.html">
+      <img src="Segredos.png" alt="Imagem 2">
+    </a>
+  </div>
+  <div class="galeria-item">
+    <a href="login.html">
+      <img src="Lançamentos.png" alt="Imagem 3">
+    </a>
+  </div>
+  <div class="galeria-item">
+    <a href="login.html">
+      <img src="Tier List.png" alt="Imagem 4">
+    </a>
+  </div>
+</section>
+ 
+<footer>
+  <div class="footer-container">
+      <div class="footer-sobre">
+          <h3>Sobre Nós</h3>
+          <p>Somos uma pequena comunidade dedicado a produzir um site próprio para games, com objetivo de ajudar jogadores iniciantes a terem um conhecimento melhor nesta área de forma rápida e acessível.</p>
+      </div>
+      <div class="footer-links">
+ 
+      </div>
+      <div class="footer-contato">
+          <h3>Contato</h3>
+          <img src="Instagram_icone.png"  alt="instagram" width="50" height="50">
+          <h3><a href="https://www.instagram.com/vitin._7.xs/.html">@Vitor Augusto</a></h3>
+          <img src="Youtube_logo.png"  alt="Youtube" width="60" height="40">
+          <h3><a href="https://youtube.com/@v-2025-s6o?feature=shared">@Vitor Gaspar</a></h3>
+      </div>
+  </div>
+  <div class="footer-direitos">
+      <p>&copy; 2025 Todos os direitos reservados, Você não sabia!®.</p>
+  </div>
+</footer>
+</body>
+</html>
